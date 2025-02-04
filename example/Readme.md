@@ -36,13 +36,12 @@ Typesense Schema:
 ``` javascript
 module.exports = function(data) {
     const escapeHtml = (text) => text ? text.replace(/(<([^>]+)>)/gi, '') : text;
-	console.log(data)
     return data.map(item => ({
         id: item.id.toString(),
         email: item.email,
         first_name: item.first_name,
         last_name: item.last_name,
-        role: item.role.name,
+        role: item.role ? item.role.name : null
     }));
 };
 ```
