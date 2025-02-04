@@ -60,11 +60,13 @@ module.exports = function(data) {
         },
         {
             "name": "first_name",
-            "type": "string"
+            "type": "string",
+            "optional": true
         },
         {
             "name": "last_name",
-            "type": "string"
+            "type": "string",
+            "optional": true
         },
         {
             "name": "role",
